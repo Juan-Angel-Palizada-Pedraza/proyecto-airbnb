@@ -26,17 +26,22 @@ button {
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding: 20px;
 }
 
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+}
+
 .card {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
   background: white;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  margin: 10px;
   padding: 10px;
   width: 300px;
 }
@@ -44,4 +49,9 @@ main {
 .card img {
   width: 100%;
   border-radius: 8px;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
 }

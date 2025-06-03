@@ -15,14 +15,25 @@
       <option value="">Todos los tipos</option>
     </select>
 
+    <input type="number" id="minPrice" placeholder="Precio mínimo" />
+    <input type="number" id="maxPrice" placeholder="Precio máximo" />
+    <input type="number" id="minRating" placeholder="Calificación mínima (1-5)" step="0.1" min="1" max="5" />
+
+    <input type="date" id="checkIn" />
+    <input type="date" id="checkOut" />
+
     <button onclick="searchAirbnb()">Buscar</button>
   </header>
 
-  <main id="results">
-    <!-- Aquí se mostrarán los resultados -->
+  <main id="results-container">
+    <div id="results" class="carousel"></div>
+    <div class="pagination">
+      <button onclick="previousPage()">Anterior</button>
+      <span id="pageIndicator">Página 1</span>
+      <button onclick="nextPage()">Siguiente</button>
+    </div>
   </main>
 
   <script src="./js/app.js"></script>
 </body>
 </html>
-
